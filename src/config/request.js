@@ -15,7 +15,7 @@ export const request = async(method, url, data={})=>{
         case "get":
             config= {
                 method: method,
-                url: baseUrl+url,
+                url: process.env.REACT_APP_BASE_URL+url,
                 headers:headers
 
             }

@@ -1,25 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { meteorAsyncCall } from "../service/MetroManager";
 
 
 
-export const FetchUserData = createAsyncThunk(
-    "auth/FetchUserData",async (_,{rejectWithValue})=>{
-        try {
-            const res = await meteorAsyncCall("user.fetchdata")
-            // console.log("user.fetchdata fulfilled",res)
-            console.log("user.fetchdata fulfilled")
 
-            return res            
-        } catch (error) {
-            console.log("error user.fetchdata", error)
-            return rejectWithValue(error)
-        }
-        
-    }
-
-
-)
 
 const initialState={
     user:null,
@@ -67,10 +50,10 @@ const slice = createSlice(
             }
         },
         extraReducers:{
-            [FetchUserData.fulfilled]:(state,{payload})=>{
-                state.user = payload
+            // [FetchUserData.fulfilled]:(state,{payload})=>{
+            //     state.user = payload
 
-            }
+            // }
         }
     }
 )
