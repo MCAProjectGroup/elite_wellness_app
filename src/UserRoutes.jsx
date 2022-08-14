@@ -14,6 +14,7 @@ function UserRoutes() {
 
         <Route  path='/user'  element={<Home title={"User2"} />} />
         <Route  path='/' exect element={<Home title={"User"} />} />
+        <Route  path='/*' exect element={<Home title={"404 page not found"} />} />
         
         
     </Routes>

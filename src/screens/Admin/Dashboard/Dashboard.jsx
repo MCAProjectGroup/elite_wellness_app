@@ -1,5 +1,5 @@
 import React from 'react'
-import MainDash from '../../../components/MainDash/MainDash'
+import MainDash from './MainDash/MainDash'
 import Sidebar from '../../../components/Sidebar/Sidebar'
 import RightSide from '../../../components/RightSide/RightSide'
 import "./Dashboard.css"

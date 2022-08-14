@@ -1,6 +1,6 @@
 import React from 'react'
-import Cards from '../Cards/Cards'
-import TableComp from '../TableComp/TableComp'
+import Cards from '../../../../components/Cards/Cards'
+import TableComp from '../../../../components/TableComp/TableComp'
 import "./MainDash.css"
 const MainDash = () => {
   return (
