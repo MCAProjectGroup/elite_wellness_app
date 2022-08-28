@@ -14,7 +14,7 @@
 }
 .navbar .logoContainer{
     display: flex;
-    align-items: ;
+    align-items: center;
 }
 .navbar .rightside .name{
     color:black;
@@ -52,7 +52,10 @@
     font-size: 20px;
     padding-left: 15px;
     color: black;
+    margin-top: 10px;
+
 }
+
 .leftside button{
     height: 32px;
     width:70px;
@@ -68,6 +71,7 @@ button :hover{
     height: 32px;
     font-size: 14px;
     color: black;
+    margin-right: 10px;
 }
 /* @media (max-width:850px){
     .navbar .leftside .links a{
@@ -115,6 +119,10 @@ button :hover{
     .navbar .leftside .middle{
         margin-right: 220px;
     }
+    .leftside .search middle{
+        text-align: center;
+        display: flex;
+    }
 
 .search{
     width: 3.5rem;
@@ -123,6 +131,7 @@ button :hover{
     background: none;
     border: none;
     outline: none;
+    margin-top: 10px;
 }
 .input{
     width: 100%;
