@@ -4,7 +4,7 @@ import {
     Routes,
     BrowserRouter as Router,
 } from 'react-router-dom'
-import Dashboard from './screens/Admin/Dashboard/Dashboard'
+// import Dashboard from './screens/Admin/Dashboard/Dashboard'
 import Home from './screens/Home'
 
 const AdminRoute = () => {
@@ -17,8 +17,9 @@ const AdminRoute = () => {
                 {/* <Login /> */}
                 {/* <Navbar LoginUser={LoginUser} /> */}
 
-                <Route path={"/"} exact element={<Dashboard  />} />
-                <Route path={'/user2'} exact element={<Home title={"Admin2"} />} />
+                {/* <Route path={"/"} exact element={<Dashboard  />} /> */}
+                <Route path={'/'} exact element={<Home title={"Admin2"} />} />
+                <Route path={'/plan'} exact element={<Home title={"Plan"} />} />
 
 
             </Routes>
