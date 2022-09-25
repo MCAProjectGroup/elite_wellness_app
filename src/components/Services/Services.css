@@ -1,0 +1,27 @@
+
+   body {
+   font-family: Helvetica;
+   padding: 2%;
+   color: #333333;
+   }
+   div.doctor-list{
+   width: 100%;
+   }
+   div.doctor {
+   width: 93%;
+   display: inline-block;
+   border: 1px solid #d2d4d8;
+   padding: 2% 2% 0 5%;
+   margin-bottom: 5%;
+   }
+   div.name {
+   font-weight: bold;
+   }
+   div.images {
+   width: 100%;
+   text-align: center;
+   }
+   div.image {
+   width: 40%;
+   display: inline-block;
+   }

@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import Signin from './components/Form/Signin';
 import Signup from './components/Form/Signup';
 import Footer from './components/Footer/Footer';
+import Services from './components/Services/Services';
 import Card3 from './Cards/Card3/Card3';
 import Card2 from './Cards/Card2/Card2';
 import Card1 from './Cards/Card1/Card1';
@@ -18,30 +19,22 @@ import {
 import Home from './screens/Home'
 import { Grid } from '@mui/material';
 
+
+
+
 function UserRoutes() {
   return (
     <>
-      {/* <Navbar/> */}
-      {/* <Card1/> */}
+      <Navbar/>
+      <Card1/>
       {/* <Signin/> */}
       {/* <Signup/> */}
-      {/* <Card3/> */}
-      {/* <Card2/> */}
-      {/* <Footer/> */}
-      <Grid container spacing={2}>
-        <Grid item sm={3} xs={6}>
-          <div>xs=8</div>
-        </Grid>
-        <Grid item sm={3} xs={6}>
-          <div>xs=4</div>
-        </Grid>
-        <Grid item sm={3} xs={6}>
-          <div>xs=4</div>
-        </Grid>
-        <Grid item sm={3} xs={6}>
-          <div>xs=8</div>
-        </Grid>
-      </Grid>
+      <Card2/>
+      <Card3/>  
+      {/* <Services/> */}
+
+      <Footer/>
+ 
       
     <Routes>
    

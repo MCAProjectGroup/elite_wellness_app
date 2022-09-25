@@ -1,0 +1,45 @@
+
+  form {
+  
+    margin: 0px auto;
+    margin-left: 50px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  form input {
+    max-width:240px;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+  }
+  input[type="button"] {
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color:#044582;
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+  
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .para-2 {
+    text-align: center;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+
+  
+  
+  

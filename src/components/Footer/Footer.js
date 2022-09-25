@@ -1,122 +1,96 @@
-import React from 'react';
-import './Footer.css';
+import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
-function Footer() {
+function Foot() {
   return (
-    <div className="container">
-<footer className="footer">
-  <div className="footer__addr">
-    <h1 className="footer__logo" >Elite Wellness</h1>
-        
-    <address >
-     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint atque porro repellat? <br/>
-    </address>
-  </div>
-  
-  <ul className="footer__nav">
-    <li className="nav__item">
-      <h2 className="nav__title">Exlpore</h2>
+    <div>
+        {/* <!-- ======= Footer ======= --> */}
+  <footer id="footer" class="footer py-4" style={{backgroundColor:"#111C37",color:"#FFFFFF"}}>
 
-      <ul className="nav__ul">
-        <li>
-          <a href="#">Home</a>
-        </li>
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
 
-        <li>
-          <a href="#">About</a>
-        </li>
-            
-        <li>
-          <a href="#">Contact Us</a>
-        </li>
-        <li>
-          <a href="#">Terms and conditions</a>
-        </li>
-        <li>
-          <a href="#">FAQs</a>
-        </li>
-      </ul>
-    </li>
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Elite Wellness</h3>
+              Lorem ipsum, dolor sit amet
+              <br/> consectetur adipisicing elit. Sint 
+              <br/>atque porro repellat? 
     
-    <li className="nav__item ">
-      <h2 className="nav__title">Services</h2>
-      
-      <ul className="nav__ul">
-        <li>
-          <a href="#">Online Doctor Consulation</a>
-        </li>
-        
-        <li>
-          <a href="#">All Doctor List</a>
-        </li>
-      </ul>
-    </li>
-    <li className="nav__item ">
-      <h2 className="nav__title">Top Specialties</h2>
-      
-      <ul className="nav__ul ">
-        <li>
-          <a href="#">Covid Consultation</a>
-        </li>
-        
-        <li>
-          <a href="#">Consult Physicians</a>
-        </li>
-        <li>
-          <a href="#">Consult Dermatologists</a>
-        </li>
-        <li>
-          <a href="#">Consult Diabetologists</a>
-        </li>
-        <li>
-          <a href="#">Consult Cardiologists</a>
-        </li>
-        <li>
-          <a href="#">Others</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li className="nav__item">
-      <h2 className="nav__title">Social</h2>
-      
-      <ul className="nav__ul">
-        <li>
-        
-          <a href="#" className="icon"> <FacebookIcon/> Facebook</a>
-        </li>
-        
-        <li>
+            </div>
+          </div>
+          {/* <!-- End footer info column--> */}
 
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Explore</h4>
+            <ul  style={{listStyle:"none",marginLeft:"-30px"}} >
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Home</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>About us</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Contact Us</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Terms and conditions</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>FAQs</a></li>
+            </ul>
+          </div>
+          {/* <!-- End footer links column--> */}
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4> Services</h4>
+            <ul style={{listStyle:"none",marginLeft:"-30px"}}>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>online Doctor Consulation</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>All Doctor List</a></li>
+             
+            </ul>
+          </div>
+          {/* <!-- End footer links column--> */}
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Top Specialties </h4>
+            <ul style={{listStyle:"none",marginLeft:"-30px"}}>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Covid Consulation</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Physicians</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Dermatologists</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Diabetologists</a></li>
+              <li><a href="#"style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Cardiologists</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Others</a></li>
+            </ul>
+          </div>
+          {/* <!-- End footer links column--> */}
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Social</h4>
+            <ul style={{listStyle:"none",marginLeft:"-30px"}}>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}><FacebookIcon/> Facebook</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}><InstagramIcon/>  Instagram</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}> <TwitterIcon/> Twitter</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}><LinkedInIcon/> Linkedln</a></li>
+              <li><a href="#" style={{textDecoration:"none",color:"#FFFFFF"}}><YouTubeIcon/> YouTube</a></li>
+            </ul>
+          </div>
+          {/* <!-- End footer links column--> */}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright Since Satyush Elite Wellness. All Rights Reserved
+        </div>
         
-          <a href="#" className="icon"> <InstagramIcon/>  Instagram</a>
-        </li>
-        
-        <li>
-          <a href="#" className="icon">   <TwitterIcon/> Twitter</a>
-        </li>
-        <li>
-          <a href="#" className="icon"><LinkedInIcon/> Linkedln</a>
-        </li>
-        <li>
-          <a href="#" className="icon"><YouTubeIcon/> YouTube</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  
-  <div className="legal">
-    <p> Copyright &copy; Since Satyugh. All rights reserved.</p>
-    
-  </div>
-</footer>
+      </div>
+    </div>
+
+  </footer>
+  {/* <!-- End Footer --> */}
+
     </div>
   )
 }
 
-export default Footer
+export default Foot
