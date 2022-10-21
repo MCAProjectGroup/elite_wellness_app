@@ -1,66 +1,36 @@
 import React from 'react'
-import Card from '@mui/material/Card';
-import { CardContent, Typography,Container ,Grid, Link} from '@mui/material';
-import { height } from '@mui/system';
-import CloseIcon from '@mui/icons-material/Close';
-import './Signup.css'
+import { Link } from 'react-router-dom';
+import './Signup.css';
 
 function Signup() {
   return (
     <div>
-      <Card variant="fullfilled" style={{maxWidth:"393px" , width:"90%", height:"609px",backgroundColor:"#FFFFFF", margin:"0 auto" ,marginTop:"20px",position:"relative" }}>
-       <div  style={{position:"absolute", right: "1rem", top :"1rem"}} >
-       <CloseIcon />
-       </div>
-        <CardContent>
-          <Typography style={{textAlign:"center",marginTop:"30px"}}><h2>Sign Up</h2> </Typography>
-            
-      <form>
-        {[{
-          name:"Full Name",
-          
-        },
-        {
-          name:"Phone",
-          
-        },
-        {
-          name:"Email",
-          
-        },
-        {
-          name:"Password",
-          type:"password"
-          
-        },
-        {
-          name:"Confirm Password",
-          type:"password"
-        }
-        ].map((item, index)=>(
-        <div>
-          <label>{item.name}</label>
-          <input type={item.type || "text"} placeholder="" />
-        </div>
-        ))
-        }
-        
-        
-       
-        <input type="button" value="Submit" />
-      </form>
-      <p class="para-2">
-              <Grid item xs>
-              Already have an account?
-                <Link href="#" variant="body2">
-                Login
-                </Link>
-              </Grid>
-              </p>
-        
-        </CardContent>
+      <div className="container sign" style={{marginTop:"40px"}}>
+ 
+    <form action="/" method='post'>
+ 
+     <h1 style={{color:"black",textAlign:"center",marginBottom:"20px"}}>Sign Up</h1>
+     
 
-      </Card>
+     <label className="label" for="name" >Full Name</label>
+     <input type="text" placeholder="Name" required autofocus/>
+
+     <label className="label" for="phone" >Phone</label>
+     <input type="tel" placeholder="Mobile Number" required/>
+
+     <label className="label" for="Email" >Email id</label>
+     <input type="email" placeholder="Email" required/>
+
+     <label className="label" for="Password" >Password</label>
+     <input type="password" placeholder="Password" required/>
+
+     <label className="label" for="ConfirmPassword" >Confirm Password</label>
+     <input type="password" placeholder="Confirm Password" required/>
+     
+     <input type="submit" value="Submit"/>
+     <p className="message" style={{marginTop:"20px",textAlign:"center"}}>Already have an account? <Link to="#">Login</Link></p>
+ </form>
+</div>       
     </div>
   )
 }

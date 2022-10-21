@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from './components/navbar/Navbar';
-import Signin from './components/Form/Signin';
+import Login from './components/Form/Login';
 import Signup from './components/Form/Signup';
+import Doctorform from './components/Form/Doctorform';
 import Footer from './components/Footer/Footer';
 import Services from './components/Services/Services';
 import Card3 from './Cards/Card3/Card3';
@@ -16,8 +17,19 @@ import {
     BrowserRouter as Router
   } from 'react-router-dom'
 
-import Home from './screens/Home'
+import Home from './screens/User/Home/Home'
 import { Grid } from '@mui/material';
+import Faqs from './components/Faqs/Faqs';
+// import Contactus from './components/Contactus/Contactus';
+import About from './components/About/About';
+import Terms from './components/Terms/Terms';
+import Page from './components/Pagenotfound/Page';
+import Doctor from './screens/User/DoctorList/Doctor';
+
+// import Loginscreen from './screens/User/Loginscreen/Loginscreen';
+
+
+
 
 
 
@@ -25,25 +37,41 @@ import { Grid } from '@mui/material';
 function UserRoutes() {
   return (
     <>
-      <Navbar/>
-      <Card1/>
-      {/* <Signin/> */}
+      {/* <Navbar/> */}
+      {/* <Card1/> */}
+      {/* <Login/> */}
       {/* <Signup/> */}
-      <Card2/>
-      <Card3/>  
+      {/* <Card2/> */}
+      {/* sideline aa raha h  */}
+      {/* <Card3/>         */}
       {/* <Services/> */}
 
-      <Footer/>
+      
+      {/* <Faqs/> */}
+      {/* <Contactus/> */}
+       {/* sideline aa raha h  */}
+      {/* <About/> */}
+      {/* <Terms/> */}
+      {/* <Page/> */}
+      {/* <Doctor/> */}
+      <Doctorform/>
+
+     
+      
+     {/* <Home /> */}
  
       
-    <Routes>
-   
-        {/* <Route  path='/user'  element={<Home title={"User2"} />} /> */}
-        {/* <Route  path='/' exect element={<Home title={"User"} />} /> */}
-        {/* <Route  path='/*' exect element={<Home title={"404 page not found"} />} /> */}
+     {/* <Routes>  */}
+     {/* <Route  path='/' exect element={<Home title={"User"} />} />  */}
+        {/* <Route  path='/list'  element={<Doctor title={"User2"} />} /> */}
+        {/* <Route  path='/login'  element={<Loginscreen />} /> */}
+
+        
+        {/* <Route  path='/*' exect element={<Page title={"404 page not found"} />} /> */}
         
         
-    </Routes>
+    {/* </Routes> */}
+    {/* <Footer/> */}
     </>
    
   )

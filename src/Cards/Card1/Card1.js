@@ -4,13 +4,19 @@ import React from 'react'
 import "./Card1.css"
 const Card1 = () => {
   return (
-    <Container maxWidth={"100%"} sx={{
+    <Container maxWidth={false} sx={{
         backgroundColor:"#E6FBFD",
         height:"100vh",
         width:"100%"
     }}>
-      <Grid container>
-        <Grid md={6} sx={12}>
+      <Grid container sx={{
+          overflowX:"hidden",
+          height:"100vh",
+          width:"100%"
+      }}>
+        <Grid lg={6} md={6} xs={12} sx={{
+          // bgcolor:"red"
+        }} >
           <div className="topBanner_leftSide">
             <div className="topBanner_leftSide_img">
                 <img src={require("../../assets/images/Rectangle 4.png")}  alt="" />
@@ -31,7 +37,7 @@ const Card1 = () => {
             </div>
           </div>
         </Grid>
-        <Grid md={6} sm={12}>
+        <Grid lg={6} md={6}  xs={12}>
            <div className="topBanner_RightSide">
             <div className="mid">
               <div className="img">
