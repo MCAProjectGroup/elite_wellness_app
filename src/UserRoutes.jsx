@@ -44,7 +44,7 @@ function UserRoutes() {
       {/* <Card2/> */}
       {/* sideline aa raha h  */}
       {/* <Card3/>         */}
-      {/* <Services/> */}
+      <Services/>
 
       
       {/* <Faqs/> */}
