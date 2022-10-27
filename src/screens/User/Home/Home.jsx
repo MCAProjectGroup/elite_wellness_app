@@ -9,7 +9,8 @@ const Home = () => {
   return (
     <>
           {/* <Navbar/> */}
-       <Card1/>
+              <Card1/>
+
       <Card2/>
       <Card3/>        
       

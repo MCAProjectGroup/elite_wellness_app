@@ -4,7 +4,7 @@ import React from 'react'
 
 function Card3() {
   return (
-    <div>
+    <div style={{overflowX:"hidden"}}>
     <div className="row gy-6 my-4">
 
       {/* ----------------Images------------ */}

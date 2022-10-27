@@ -30,11 +30,11 @@ function Foot() {
           <div className="col-lg-2 col-md-3 footer-links">
             <h4>Explore</h4>
             <ul  style={{listStyle:"none",marginLeft:"-30px"}} >
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Home</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>About us</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Contact Us</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Terms and conditions</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>FAQs</Link></li>
+              <li><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>Home</Link></li>
+              <li><Link to="/about-us" style={{textDecoration:"none",color:"#FFFFFF"}}>About us</Link></li>
+              <li><Link to="/contact-us" style={{textDecoration:"none",color:"#FFFFFF"}}>Contact Us</Link></li>
+              <li><Link to="/terms" style={{textDecoration:"none",color:"#FFFFFF"}}>Terms and conditions</Link></li>
+              <li><Link to="/faq" style={{textDecoration:"none",color:"#FFFFFF"}}>FAQs</Link></li>
             </ul>
           </div>
           {/* <!-- End footer links column--> */}
@@ -42,8 +42,8 @@ function Foot() {
           <div className="col-lg-2 col-md-3 footer-links">
             <h4> Services</h4>
             <ul style={{listStyle:"none",marginLeft:"-30px"}}>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>online Doctor Consulation</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>All Doctor List</Link></li>
+              <li><Link to="/doctorlist" style={{textDecoration:"none",color:"#FFFFFF"}}>online Doctor Consulation</Link></li>
+              <li><Link to="/doctorlist" style={{textDecoration:"none",color:"#FFFFFF"}}>All Doctor List</Link></li>
              
             </ul>
           </div>
@@ -52,12 +52,12 @@ function Foot() {
           <div className="col-lg-2 col-md-3 footer-links">
             <h4>Top Specialties </h4>
             <ul style={{listStyle:"none",marginLeft:"-30px"}}>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Covid Consulation</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Physicians</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Dermatologists</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Diabetologists</Link></li>
-              <li><Link to="#"style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Cardiologists</Link></li>
-              <li><Link to="#" style={{textDecoration:"none",color:"#FFFFFF"}}>Others</Link></li>
+              <li><Link to="/doctorlist" style={{textDecoration:"none",color:"#FFFFFF"}}>Covid Consulation</Link></li>
+              <li><Link to="/doctorlist" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Dermatologists</Link></li>
+              <li><Link to="/doctorlist" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Physicians</Link></li>
+              <li><Link to="/doctorlist" style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Diabetologists</Link></li>
+              <li><Link to="/doctorlist"style={{textDecoration:"none",color:"#FFFFFF"}}>Consult Cardiologists</Link></li>
+              <li><Link to="/doctorlist" style={{textDecoration:"none",color:"#FFFFFF"}}>Others</Link></li>
             </ul>
           </div>
           {/* <!-- End footer links column--> */}

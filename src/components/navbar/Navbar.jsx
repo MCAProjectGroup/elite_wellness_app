@@ -1,16 +1,19 @@
 import React from 'react'
 import './Navbar.css'
 import SearchIcon from '@mui/icons-material/Search';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const navigate = useNavigate();
   return (
     <div>
        <nav className="navbar">
     <label className="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
             <i className="fa fa-bars"></i>
         </label>
-        <div>
+        <div onClick={()=>{
+          navigate("/")
+        }}>
         <img  src={require("../../assets/icons/logo.png")} style={{height:32, width:32, objectFit:"contain",marginLeft:"20px"}}/>
         <span style={{marginLeft:"10px",color:"black"}}>Elite Wellness</span>
         </div>
@@ -28,7 +31,7 @@ function Navbar() {
         </div>
       </form>
       <li style={{marginTop:"10px"}}>
-        <Link to="#" className="nav-links"   >Specialist</Link>
+        <Link to="/doctorlist" className="nav-links"   >Specialist</Link>
       </li>
       <li style={{marginTop:"10px"}}>
         <Link to={"#"} className="nav-links">Video Consult</Link>
@@ -38,7 +41,7 @@ function Navbar() {
         </Link>
       </li>
       <li style={{marginTop:"10px"}}>
-        <Link to={"#"} className="nav-links"> <button type="button" className="btn btn-outline-primary" style={{paddingRight:"30px",marginRight:"20px",paddingLeft:"30px", paddingTop:"2px"}}>Signup</button></Link>
+        <Link to={"/signup"} className="nav-links"> <button type="button" className="btn btn-outline-primary" style={{paddingRight:"30px",marginRight:"20px",paddingLeft:"30px", paddingTop:"2px"}}>Signup</button></Link>
       </li>
      
     </ul>

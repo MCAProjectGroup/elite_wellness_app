@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Services() {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="container mt-5 " >
@@ -11,7 +13,9 @@ function Services() {
           </div>
         </div>
       <div className="container mt-5 mb-5" >
-    <div className="d-flex justify-content-center row" style={{heigh:"200px"}}>
+    {
+      [1,2,3,4,5,6].map(()=>(
+        <div className="d-flex justify-content-center row" style={{heigh:"200px" , marginBottom: "2rem"}}>
         <div className="col-md-10">
             <div className="row bg-white border rounded">
                 <div className="col-md-2 mt-1"><img className="img-fluid img-responsive rounded product-image" src={require("../../assets/images/image 16.png")}  style={{height:"100px"}}/>
@@ -44,7 +48,9 @@ function Services() {
 
 
                     <div className="d-flex ">  
-                      <button className="btn btn-outline-primary my-2 " type="button">Book Now</button>
+                      <button className="btn btn-outline-primary my-2 " type="button" onClick={()=>{
+                        navigate("appointment-book")
+                      }}>Book Now</button>
                      <div style={{marginLeft:"10px",color:"red",marginTop:"10px"}}><i className="fa-solid fa-heart" ></i></div> 
                        </div>
                        
@@ -53,7 +59,9 @@ function Services() {
             
         </div>
     </div>
-</div>
+      ))
+    }
+    </div>
 
    
      

@@ -1,13 +1,13 @@
-// import React from 'react'
-// import Login from '../../../components/Form/Login';
+import React from 'react'
+import Login from '../../../components/Form/Login';
 
-// function Loginscreen() {
-//   return (
-//     <>
-//     <Login/>
+function Loginscreen() {
+  return (
+    <>
+    <Login/>
 
-//     </>
-//   )
-// }
+    </>
+  )
+}
 
-// export default Loginscreen
+export default Loginscreen

@@ -85,7 +85,7 @@
   
     .logo:hover,
     .nav-links:hover {
-      color:blue);
+      color:blue;
     }
   }
    /* search menu */
@@ -96,7 +96,8 @@
   .search-box {
     position: relative;
     height: 34px;
-    width:350px;
+    width: 90%;
+    max-width:350px;
     margin-bottom: 20px;
   
   }
@@ -130,6 +131,15 @@
   }
   
   
-  
+  @media screen and (max-width: 390px) {
+  #chkToggle:checked + ul.main-nav{
+    padding-left: 0px;
+    width: 100%;
+    
+  }
+  .search-box{
+    margin-left: 1rem;
+  }
+  }
 
  

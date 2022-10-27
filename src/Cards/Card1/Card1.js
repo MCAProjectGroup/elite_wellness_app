@@ -1,18 +1,23 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 import "./Card1.css"
 const Card1 = () => {
+  const navigate = useNavigate();
   return (
     <Container maxWidth={false} sx={{
         backgroundColor:"#E6FBFD",
         height:"100vh",
-        width:"100%"
+        width:"100%",
+        alignItems:"center",
     }}>
       <Grid container sx={{
           overflowX:"hidden",
           height:"100vh",
-          width:"100%"
+          width:"100%",
+        overflowY:"hidden"
+
       }}>
         <Grid lg={6} md={6} xs={12} sx={{
           // bgcolor:"red"
@@ -28,10 +33,15 @@ const Card1 = () => {
                     Always Caring Always Here
                     </Typography>
                 <div className='option_btn'>   
-                    <Button variant="contained"  style={{
+                    <Button variant="contained" onClick={()=>{
+                      navigate("appointment-book")
+                    }}  style={{
                       marginRight:"1rem",backgroundColor:"002FA9"
                     }}>Get Appointment</Button>
-                    <Button variant="outlined">Learn More</Button>
+
+                    <Button variant="outlined" onClick={()=>{
+                      navigate("about-us")
+                    }}>Learn More</Button>
             </div>  
                 </div>
             </div>
