@@ -1,0 +1,129 @@
+
+
+
+.cardterm {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    width: 1200px;
+    border-radius: 30px;
+    background-color: #111C37;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardterm .primary-heading {
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 50px ;
+    font-size: 4em;
+}
+
+.paragraph {
+    font-family: josefin sans;
+    color: #FFFFFF;
+    margin-left: 50px;
+    margin-right: 25px;
+    padding-top: 50px;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1218px) {
+    .cardterm {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        width: 1000px;
+        border-radius: 30px;
+        background-color: #111C37;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 1012px) {
+    .cardterm {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        width: 800px;
+        border-radius: 30px;
+        background-color: #111C37;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 832px) {
+    .cardterm {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        width: 600px;
+        border-radius: 30px;
+        background-color: #111C37;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cardterm.primary-heading {
+        font-size: 3.5em;
+    }
+
+
+}
+
+@media only screen and (max-width: 626px) {
+    .cardterm {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        width: 450px;
+        border-radius: 30px;
+        background-color: #111C37;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   
+
+    
+
+    .cardterm .primary-heading {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cardterm {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        width: 350px;
+        border-radius: 30px;
+        background-color: #111C37;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cardterm .primary-heading {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .cardterm {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        width: 290px;
+        border-radius: 30px;
+        background-color: #111C37;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cardterm .primary-heading {
+        font-size: 2em;
+    }
+}

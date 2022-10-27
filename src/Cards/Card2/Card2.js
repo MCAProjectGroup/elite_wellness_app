@@ -1,61 +1,53 @@
-import React from 'react';
-import './Card2.css';
-// import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
+import React, { useRef } from 'react'
 
-
-
-function Card2() {
+function card2() {
+  
   return (
-    <div className='card2'>
-        <div className='leftside'>
-        <div className='img'><img  src={require("../../assets/images/image 13.png")} /></div>
+    <div>
+      {/* <!-- ======= Services Section ======= --> */}
+    <section id="service" className="services pt-0" style={{marginBottom:"60px"}}>
+      <div className="container" >
+
+        <div className="section-header my-2" style={{textAlign:"center"}}>
+          <h2 style={{textDecoration:"underline"}}>Our Services</h2>
+          <div style={{color:"black",fontSize:"20px"}}>We are here to help you</div>
+
         </div>
-        {/* ==========Appointment form===================== */}
-        <div className='rightsideform'>
-          <p>
-            
-            Reservations</p>
-          <p className='heading'>Book An Appointment Now !</p>
-          <p className='para'>Elite Wellness Provides Faster Appointment Booking. You are Just a click! Away</p>
-          {/* ================form============= */}
-          <div class="login-box" >
-      <form id="user-input">
-      <div className='user-box' >
-      <input type="text" name="" />
-      <label>Your Name</label>
-    </div>
-    <div className='user-box' >
-      <input type="email" name="" required=""/>
-      <label>Your Email</label>
-    </div>
-     <div className='user-box' >
-      <input type="number" name="" required=""/>
-      <label>Appointment Date</label>
-    </div>
-    <div className='user-box' >
-      <input type="number" name=""/>
-      <label>Mobile Number</label>
-    </div>
-    <div className='user-box' >
-      <input type="text" name="" required=""/>
-      <label>Select Department</label>
-    </div> 
-   
-  </form>
-</div>
-          
 
-          <button type="button" class="button buttonBlue">Make Appointment
-    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-  </button>
-  
-          
-  
-</div>
-</div>   
-        
+        <div className="row gy-4">
 
+          <div className="col-lg-4 col-md-6"  >
+            <div className="card" >
+              <div className="card-img" style={{ objectFit:"cover"}}>
+                <img src={require("../../assets/images/image 10.png")}  alt="" className="img-fluid" style={{objectFit:"cover",width:"420px" }}/>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End Card Item --> */}
+
+          <div className="col-lg-4 col-md-6" >
+            <div className="card">
+              <div className="card-img">
+                <img src={require("../../assets/images/image 11.png")}  alt="" className="img-fluid" style={{width:"420px"}}/>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End Card Item --> */}
+
+          <div className="col-lg-4 col-md-6" >
+            <div className="card" >
+              <div className="card-img">
+                <img src={require("../../assets/images/image 12.png")}  alt="" className="img-fluid" style={{width:"420px"}}/>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End Card Item --> */}
+        </div>
+      </div>
+    </section>
+    {/* <!-- End Services Section --> */}
+    </div>
   )
 }
 
-export default Card2
+export default card2

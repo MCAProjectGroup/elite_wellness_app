@@ -1,31 +1,77 @@
-import React from "react";
-import "./Card1.css";
-import { Button } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function Card1() {
- 
+import "./Card1.css"
+const Card1 = () => {
+  const navigate = useNavigate();
   return (
-    <div>
-      <header id="header" className="header">
-        <div className="oval">
-          <img src={require("../../assets/images/Rectangle 4.png")} />
-        </div>
-        <div className="header-content">
-          <div className="header-text">
-            <p id="hyper1">ADVANCE HEAL THCARE</p>
-            <h1>Always Caring Always Here</h1>
+    <Container maxWidth={false} sx={{
+        backgroundColor:"#E6FBFD",
+        height:"100vh",
+        width:"100%",
+        alignItems:"center",
+    }}>
+      <Grid container sx={{
+          overflowX:"hidden",
+          height:"100vh",
+          width:"100%",
+        overflowY:"hidden"
+
+      }}>
+        <Grid lg={6} md={6} xs={12} sx={{
+          // bgcolor:"red"
+        }} >
+          <div className="topBanner_leftSide">
+            <div className="topBanner_leftSide_img">
+                <img src={require("../../assets/images/Rectangle 4.png")}  alt="" />
+                <div className="contant">
+                    <Typography component={"p"}  className={"themeLabel1"} >
+                    ADVANCED HEALTHCARE
+                    </Typography>
+                    <Typography component={"h2"}  className={"themeLabel2"}  >
+                    Always Caring Always Here
+                    </Typography>
+                <div className='option_btn'>   
+                    <Button variant="contained" onClick={()=>{
+                      navigate("appointment-book")
+                    }}  style={{
+                      marginRight:"1rem",backgroundColor:"002FA9"
+                    }}>Get Appointment</Button>
+
+                    <Button variant="outlined" onClick={()=>{
+                      navigate("about-us")
+                    }}>Learn More</Button>
+            </div>  
+                </div>
+            </div>
           </div>
-          <Button variant="contained" className="btn1">
-            Get Appointment
-          </Button>
-          <Button variant="outlined" className="btn2">
-            Learn More
-          </Button>
-        </div>
-      </header>
-      {/* header end  */}
-    </div>
-  );
+        </Grid>
+        <Grid lg={6} md={6}  xs={12}>
+           <div className="topBanner_RightSide">
+            <div className="mid">
+              <div className="img">
+              <img src={require("../../assets/images/Rectangle 6.png")} width={230} height={295} style={{objectFit:"contain"}} alt="" className="img1" />
+
+              </div>
+              <div className="img">
+              <img src={require("../../assets/images/Rectangle 8.png")} width={235} height={335} style={{objectFit:"contain"}} alt="" className="img1" />
+
+              </div>
+              <div className="img">
+              <img src={require("../../assets/images/Rectangle 10.png")} width={312} height={319} style={{objectFit:"contain"}} alt="" className="img1" />
+
+              </div>
+              <div className="img">
+              <img src={require("../../assets/images/Rectangle 1.png")}  style={{objectFit:"contain"}} alt="" className="person_banner" />
+
+              </div>
+            </div>
+          </div>
+        </Grid>
+      </Grid>
+    </Container>
+  )
 }
 
-export default Card1;
+export default Card1

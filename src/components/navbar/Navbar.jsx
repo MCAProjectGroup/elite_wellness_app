@@ -1,38 +1,56 @@
-import React ,{useState}from 'react';
-import './Navbar.css';
-import {Button} from "@mui/material";
+import React from 'react'
+import './Navbar.css'
 import SearchIcon from '@mui/icons-material/Search';
-import ReorderIcon from '@mui/icons-material/Reorder';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
-  const[showlinks,setshowlinks]=useState(false);
+  const navigate = useNavigate();
   return (
-    <div className='navbar'>
-      <div className="rightside">
-    <div className="logoContainer">
-      <img  src={require("../../assets/icons/logo.png")} style={{height:32, width:32, objectFit:"contain"}}/>
-      <div className="name">Elite Wellness</div>
-    </div>
-      </div>
-      <div className="leftside">
-        <input  className="input " type="text" placeholder='search...' />
-        <button className='search middle'>
-          <SearchIcon/>
-          </button>
-        <div className="links" id={showlinks ? "hidden" : ""}>
-        <Link to="/Specialist" class="a">Specialist</Link>
-        <Link to="/videoConsult" class="a" >Video consult</Link>
-        <Link to="/theme" class="a"><img  src={require("../../assets/images/theme.png")} style={{height:33, width:33, objectFit:"contain"}}/>Theme</Link>
-        {/* <button>Login</button> */}
-        <Button variant="outlined" id="btn">Login</Button>
-      </div>
-      <button  id="button" onClick={() => setshowlinks(!showlinks)}>
-        {" "}
-        <ReorderIcon/>
-      </button>
-      </div>
-    </div>
+    <div>
+       <nav className="navbar">
+    <label className="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+            <i className="fa fa-bars"></i>
+        </label>
+        <div onClick={()=>{
+          navigate("/")
+        }}>
+        <img  src={require("../../assets/icons/logo.png")} style={{height:32, width:32, objectFit:"contain",marginLeft:"20px"}}/>
+        <span style={{marginLeft:"10px",color:"black"}}>Elite Wellness</span>
+        </div>
+        
+
+  
+        <input type="checkbox" id="chkToggle"></input>
+    <ul className="main-nav" id="js-menu" >
+    <form className="form-inline"  style={{justifyContent:"center"}}>
+        <div className="input-group search-box" >
+          <input type="text" className="form-control" placeholder="Search here...." aria-label="Search for..."/>
+          <span className="input-group-btn">
+            <button className="btn btn-secondary" type="button"><SearchIcon/></button>
+          </span>
+        </div>
+      </form>
+      <li style={{marginTop:"10px"}}>
+        <Link to="/doctorlist" className="nav-links"   >Specialist</Link>
+      </li>
+      <li style={{marginTop:"10px"}}>
+        <Link to={"#"} className="nav-links">Video Consult</Link>
+      </li>
+      <li style={{marginTop:"10px"}}>
+        <Link to={"/login"} className="nav-links">Login
+        </Link>
+      </li>
+      <li style={{marginTop:"10px"}}>
+        <Link to={"/signup"} className="nav-links"> <button type="button" className="btn btn-outline-primary" style={{paddingRight:"30px",marginRight:"20px",paddingLeft:"30px", paddingTop:"2px"}}>Signup</button></Link>
+      </li>
+     
+    </ul>
+  </nav>
+   
+   
+      
+</div>   
+ 
   )
 }
 
