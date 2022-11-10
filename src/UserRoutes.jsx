@@ -20,7 +20,7 @@ import {
 import Home from './screens/User/Home/Home'
 import { Grid } from '@mui/material';
 import Faqs from './components/Faqs/Faqs';
-// import Contactus from './components/Contactus/Contactus';
+import Contactus from './components/Contactus/Contactus';
 import About from './components/About/About';
 import Terms from './components/Terms/Terms';
 import Page from './components/Pagenotfound/Page';
@@ -37,24 +37,24 @@ import Doctor from './screens/User/DoctorList/Doctor';
 function UserRoutes() {
   return (
     <>
-      {/* <Navbar/> */}
-      {/* <Card1/> */}
-      {/* <Login/> */}
-      {/* <Signup/> */}
-      {/* <Card2/> */}
+      <Navbar/>
+      <Card1/>
+      <Login/>
+      <Signup/>
+      <Card2/>
       {/* sideline aa raha h  */}
-      {/* <Card3/>         */}
+      <Card3/>        
       <Services/>
 
       
-      {/* <Faqs/> */}
-      {/* <Contactus/> */}
+      <Faqs/>
+      <Contactus/>
        {/* sideline aa raha h  */}
-      {/* <About/> */}
-      {/* <Terms/> */}
-      {/* <Page/> */}
+      <About/>
+      <Terms/>
+      <Page/>
       {/* <Doctor/> */}
-      <Doctorform/>
+      {/* <Doctorform/> */}
 
      
       
@@ -71,7 +71,7 @@ function UserRoutes() {
         
         
     {/* </Routes> */}
-    {/* <Footer/> */}
+    <Footer/>
     </>
    
   )
