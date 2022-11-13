@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import UserRoutes from "./UserRoutes"
+// import UserRoutes from "./UserRoutes"
 import AdminRoutes from "./AdminRoutes"
+
 import {
   Route,
   Routes,
@@ -9,6 +10,7 @@ import {
 } from 'react-router-dom'
 import Home from './screens/Home';
 import { useSelector } from 'react-redux'
+
 
 function App() {
   
@@ -22,9 +24,10 @@ function App() {
       <Router>
        
         <Routes>
+        
 
           <Route path="/admin/*" element={<AdminRoutes />} />
-          <Route path="/*" element={<UserRoutes />} />
+          {/* <Route path="/*" element={<UserRoutes />} /> */}
         </Routes>
       </Router>
     </div>
