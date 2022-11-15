@@ -36,7 +36,7 @@
     font-size: 20px;
     color: #FFFFFF;
     display: flex;
-    justify-item: space-between;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
     
@@ -47,7 +47,7 @@
     content: "";
   }
   
-  span {
+  .material-symbols-outlined {
     margin-top: 4px;
     color:#FFFFFF;
   }

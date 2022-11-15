@@ -19,7 +19,8 @@ const slice = createSlice(
             userLoginSuccess:(state, {payload})=>{
                 // state.token = "Fake Token"
                 // state.user = payload.info
-                state.token = payload.token
+                console.log(payload);
+                state.token = payload
             },
             userLogoutSuccess:(state)=>{
                 

@@ -1,14 +1,15 @@
 import axios from "axios"
-import { GetAsyncData } from "../store/storage";
-import { baseUrl } from "./config";
+// import { GetAsyncData } from "../store/storage";
+// import { baseUrl } from "./config";
 
 export const request = async(method, url, data={})=>{
-    let Data = await GetAsyncData('@token');
-    console.log("Request Token", method, url, Data)
-    let {token}= JSON.parse(Data);  
+    let token = localStorage.getItem('@token');
+    // let Data = "";
+    console.log("Request Token", method, process.env.REACT_APP_BASE_URL+url, data)
+    // let {token}= JSON.parse(Data);  
     let config = null;
     const headers = {
-        "token": token, 
+        "Authorization": token, 
         "Content-Type": "application/json"
     } 
     switch (method.toLowerCase()) {
@@ -24,7 +25,7 @@ export const request = async(method, url, data={})=>{
             headers["Content-Type"]='multipart/form-data'
             config= {
                 method: 'put',
-                url: baseUrl+url,
+                url: process.env.REACT_APP_BASE_URL+url,
                 data: data,
                 headers:headers
             }
@@ -34,7 +35,7 @@ export const request = async(method, url, data={})=>{
         default:
             config= {
                 method: method,
-                url: baseUrl+url,
+                url: process.env.REACT_APP_BASE_URL+url,
                 data: data,
                 headers: headers
             }
