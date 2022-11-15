@@ -29,7 +29,7 @@ function Signup() {
     }
     const res = await axios(
       {
-        url:"http://localhost:5000/auth/signup",
+        url:"https://glacial-plains-48105.herokuapp.com/auth/signup",
         data:SignUpForm,
         method:"post"
       }
