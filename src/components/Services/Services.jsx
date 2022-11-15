@@ -1,29 +1,47 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
+import { request } from '../../config/request';
 
 function Services() {
   const navigate = useNavigate();
+  const [DoctorsList, setDoctorsList] = useState([])
+
+    const getDoctorsListData = async()=>{
+        const response = await request("get","/user/doctor-list");
+        console.log({response});
+        setDoctorsList(response.data.data)
+    }
+
+    useEffect(() => {
+      getDoctorsListData()
+    
+      return () => {
+        
+      }
+    }, [])
   return (
     <div>
       <div className="container mt-5 " >
     <div className="d-flex justify-content-center row" >
         <div className="col-md-10">
-          <div> <h5>100 Results Found for Doctors </h5></div>
+          <div> <h5>{DoctorsList.length} Results Found for Doctors </h5></div>
           </div>
           </div>
         </div>
       <div className="container mt-5 mb-5" >
     {
-      [1,2,3,4,5,6].map(()=>(
-        <div className="d-flex justify-content-center row" style={{heigh:"200px" , marginBottom: "2rem"}}>
+      DoctorsList.map((item, index)=>(
+        <div className="d-flex justify-content-center row" key={item._id} style={{heigh:"200px" , marginBottom: "2rem"}}>
         <div className="col-md-10">
             <div className="row bg-white border rounded">
                 <div className="col-md-2 mt-1"><img className="img-fluid img-responsive rounded product-image" src={require("../../assets/images/image 16.png")}  style={{height:"100px"}}/>
                 </div>
                 <div className="col mt-1" >
                     <div style={{color:"blue"}}>Nuerologist</div>
-                    <div> <strong>Dr. Chales Warner</strong> </div>
-                    <div> MBBS,MCPS,MSc(neurologist)</div>
+                    <div> <strong>Dr. {item.name}</strong> </div>
+                    <div> {item.extra[0].spacility}</div>
                     <div className="d-flex">
                         <div className="ratings mr-2" style={{color:"yellow"}}><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i> <i className="fa fa-star"></i></div> 2000 Feedback
                     </div>
@@ -49,7 +67,7 @@ function Services() {
 
                     <div className="d-flex ">  
                       <button className="btn btn-outline-primary my-2 " type="button" onClick={()=>{
-                        navigate("appointment-book")
+                        navigate("/appointment-book/"+item._id)
                       }}>Book Now</button>
                      <div style={{marginLeft:"10px",color:"red",marginTop:"10px"}}><i className="fa-solid fa-heart" ></i></div> 
                        </div>

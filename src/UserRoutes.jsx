@@ -29,6 +29,10 @@ import Doctor from './screens/User/DoctorList/Doctor';
 import Loginscreen from './screens/User/Loginscreen/Loginscreen';
 import SignUp from './screens/User/SignUp/SignUp';
 import Doctorform from './components/Form/Doctorform';
+import DoctorRegistor from './screens/Doctor/DoctorRegistor/DoctorRegistor';
+import Panel from './screens/Panel/Panel';
+import DoctorLogin from './screens/Doctor/DoctorLogin/Login';
+import { useSelector } from 'react-redux';
 
 
 
@@ -37,6 +41,8 @@ import Doctorform from './components/Form/Doctorform';
 
 
 function UserRoutes() {
+  const token = useSelector((state) => state.auth.token)
+  
   return (
     <>
       {/* <Navbar/> */}
@@ -66,14 +72,24 @@ function UserRoutes() {
      <Routes> 
 
      <Route  path='/' exect element={<Home title={"User"} />} /> 
+        {
+          !token && (
+            <>
+            <Route  path='/login'  element={<Loginscreen />} />
+            <Route  path='/signup'  element={<SignUp />} />
+            <Route  path='/doctor/signUp'  element={<DoctorRegistor />} />
+            <Route  path='/doctor/login'  element={<DoctorLogin />} />
+            </>
+          )
+        }
+
         <Route  path='/doctorlist'  element={<Doctor  />} />
-        <Route  path='/login'  element={<Loginscreen />} />
-        <Route  path='/signup'  element={<SignUp />} />
-        <Route  path='/appointment-book'  element={<Doctorform />} />
+        <Route  path='/appointment-book/:doctor_id'  element={<Doctorform />} />
         <Route  path='/about-us'  element={<About />} />
         <Route  path='/terms'  element={<Terms />} />
         <Route  path='/contact-us'  element={<Contactus />} />
         <Route  path='/faq'  element={<Faqs />} />
+        <Route  path='/Profile'  element={<Panel />} />
 
         
         <Route  path='/*' exect element={<Page title={"404 page not found"} />} />

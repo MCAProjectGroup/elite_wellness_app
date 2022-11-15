@@ -1,12 +1,10 @@
 import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { userLoginSuccess } from '../../store/auth';
-import './Signup.css';
+import './DoctorRegistor.css';
 
-function Signup() {
+function DoctorRegistor() {
 
   const [SignUpForm, setSignUpForm] = useState({
     email:"",
@@ -14,10 +12,9 @@ function Signup() {
     password:"",
     phoneNumber:"",
     cpassowrd:"",
-    type:"patient"
+    type:"doctor",
+    doctor_speciality:""
   })
-
-  const dispatch = useDispatch()
   const navigate = useNavigate();
   function handleClick() {
     navigate("/profile");
@@ -37,8 +34,8 @@ function Signup() {
     console.log(res);
     localStorage.setItem("@token", res.data.data.token)
     localStorage.setItem("name", res.data.data.name)
-    dispatch(userLoginSuccess(res.data.data.token))
- 
+    localStorage.setItem("doctor", "true")
+
     alert(res.data.message+" "+res.data.data.name)
     handleClick()
   }
@@ -48,7 +45,7 @@ function Signup() {
  
     <form onSubmit={SubmitSignUpHandler}>
  
-     <h1 style={{color:"black",textAlign:"center",marginBottom:"20px"}}>Sign Up</h1>
+     <h1 style={{color:"black",textAlign:"center",marginBottom:"20px"}}>Doctor Sign Up</h1>
      
 
      <label className="label" for="name" >Full Name</label>
@@ -75,14 +72,17 @@ function Signup() {
      <input type="password" placeholder="Confirm Password" required onChange={(e)=>{
       setSignUpForm((state)=> ({...state, cpassowrd:e.target.value}))
      }}/>
+     <label className="label" for="Speciality" >Speciality</label>
+     <input type="text" placeholder="Speciality" required onChange={(e)=>{
+      setSignUpForm((state)=> ({...state, doctor_speciality:e.target.value}))
+     }}/>
      
      <input type="submit" value="Submit"/>
-     <p className="message" style={{marginTop:"20px",textAlign:"center"}}>Already have an account? <Link to="/login">Login</Link></p>
-     <p className="message" style={{marginTop:"20px",textAlign:"center"}}><Link to="/doctor/signup">Doctor Signup</Link></p>
+     <p className="message" style={{marginTop:"20px",textAlign:"center"}}>Already have an account? <Link to="/doctor/login">Login</Link></p>
  </form>
 </div>       
     </div>
   )
 }
 
-export default Signup
+export default DoctorRegistor
