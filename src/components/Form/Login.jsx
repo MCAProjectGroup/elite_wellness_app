@@ -22,19 +22,25 @@ function Login() {
   }
   const SubmitLoginHandler = async(e)=>{
     e.preventDefault();
-    const res = await axios(
-      {
-        url:"https://glacial-plains-48105.herokuapp.com/auth/login",
-        data:LoginForm,
-        method:"post"
-      }
-      )
-    console.log(res);
-    localStorage.setItem("@token", res.data.data.token)
-    localStorage.setItem("name", res.data.data.name)
-    dispatch(userLoginSuccess(res.data.data.token))
-    handleClick()
-    alert(res.data.message+" "+res.data.data.name)
+    try {
+      const res = await axios(
+        {
+          url: process.env.REACT_APP_BASE_URL+"/auth/login",
+          data:LoginForm,
+          method:"post"
+        }
+        )
+      console.log(res);
+      localStorage.setItem("@token", res.data.data.token)
+      localStorage.setItem("name", res.data.data.name)
+      dispatch(userLoginSuccess(res.data.data.token))
+      handleClick()
+      alert(res.data.message+" "+res.data.data.name)
+      
+    } catch (error) {
+      alert(error.response.data.message)
+      
+    }
   }
   return (
     <div>

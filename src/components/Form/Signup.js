@@ -27,20 +27,26 @@ function Signup() {
     if(SignUpForm.cpassowrd !==SignUpForm.password){
       return alert("Confirm Password not matched");
     }
-    const res = await axios(
-      {
-        url:"https://glacial-plains-48105.herokuapp.com/auth/signup",
-        data:SignUpForm,
-        method:"post"
-      }
-      )
-    console.log(res);
-    localStorage.setItem("@token", res.data.data.token)
-    localStorage.setItem("name", res.data.data.name)
-    dispatch(userLoginSuccess(res.data.data.token))
- 
-    alert(res.data.message+" "+res.data.data.name)
-    handleClick()
+    try {
+      
+      const res = await axios(
+        {
+          url:"https://glacial-plains-48105.herokuapp.com/auth/signup",
+          data:SignUpForm,
+          method:"post"
+        }
+        )
+      console.log(res);
+      localStorage.setItem("@token", res.data.data.token)
+      localStorage.setItem("name", res.data.data.name)
+      dispatch(userLoginSuccess(res.data.data.token))
+   
+      alert(res.data.message+" "+res.data.data.name)
+      handleClick()
+    } catch (error) {
+      alert(error.response.data.message)
+      
+    }
   }
   return (
     <div>
