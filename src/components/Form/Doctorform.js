@@ -17,18 +17,24 @@ function Doctorform() {
 
     const SubmitBookingFormHandler = async (e) => {
         e.preventDefault();
-        const res = await request(
-            "post",
-            "/user/doctor-appontment-booking",
-            BookingForm
-
-        )
-        console.log(res);
-        // localStorage.setItem("@token", res.data.data.token)
-        // localStorage.setItem("name", res.data.data.name)
-        // dispatch(userLoginSuccess(res.data.data.token))
-
-        alert(res.data.message)
+        try {
+            
+            const res = await request(
+                "post",
+                "/user/doctor-appontment-booking",
+                BookingForm
+    
+            )
+            console.log(res);
+            // localStorage.setItem("@token", res.data.data.token)
+            // localStorage.setItem("name", res.data.data.name)
+            // dispatch(userLoginSuccess(res.data.data.token))
+    
+            alert(res.data.message)
+        } catch (error) {
+            alert(error.response.data.message)
+            
+        }
     }
     return (
         <div>
@@ -60,7 +66,7 @@ function Doctorform() {
                                 </div> */}
                                 <div className="col-md-6">
                                     <input type="date" className="form-control" placeholder="Enter Date"  onChange={(e) => {
-                                        setBookingForm((state) => ({ ...state, appointment_date: e.target.value }))
+                                        setBookingForm((state) => ({ ...state, appointment_date: new Date(e.target.value) }))
                                     }} />
                                 </div>
                                 {/* <div className="col-md-6">

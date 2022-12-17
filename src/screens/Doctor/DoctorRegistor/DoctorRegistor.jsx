@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { userLoginSuccess } from '../../../store/auth';
 import './DoctorRegistor.css';
 
 function DoctorRegistor() {
-
+  const dispatch = useDispatch()
   const [SignUpForm, setSignUpForm] = useState({
     email:"",
     name:"",
@@ -35,6 +37,7 @@ function DoctorRegistor() {
     localStorage.setItem("@token", res.data.data.token)
     localStorage.setItem("name", res.data.data.name)
     localStorage.setItem("doctor", "true")
+    dispatch(userLoginSuccess(res.data.data.token))
 
     alert(res.data.message+" "+res.data.data.name)
     handleClick()
